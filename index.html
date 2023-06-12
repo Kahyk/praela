@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>?</title>
+    <style> .box{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        font-family: 'Courier New', Courier, monospace;
+    }
+     .buttons{
+        display: block;
+        width: 200px;
+        margin-left: 100px;
+    }
+   .button{
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    text-align: center;
+    padding: 10px 16px;
+    border-style: none;
+}
+ .button-1{
+    background-color: #ea4c89;
+    color: #ffffff;
+    transition: color 100ms;
+
+    margin-right: 10px;
+}
+ .button-1:hover{
+    background-color: #f082ac;
+ }
+ .button-2{
+    background-color: aliceblue(216, 216, 216);
+    color: #333;
+    transition: all 200ms;
+
+    z-index: 1000;
+
+ }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Cuzinho amanhã?</h1>
+       
+        <div class="buttons">
+            <a href='https://youtu.be/D0JBEu2zisY'><button>Sim</button></a>
+            <button class="button-2" id="nao">Não</button>
+        </div>
+    </div>
+</body>
+<script>
+const naoButton = document.getElementById("nao");
+    const simButton = document.getElementById("sim");
+
+    ;
+
+    const handleNao = () => { naoButton.style.position = "fixed";
+
+        const rand= Math.random();
+
+        const randTop = 
+        (rand * window.innerHeight) %
+        (window.innerHeight - naoButton.offsetHeight);
+        const randLeft =
+        (window.innerWidth * rand * 10) %
+        (window.innerWidth - naoButton.offsetWidth);
+
+        naoButton.style.top = `${randTop}px`;
+        naoButton.style.left = `${randLeft}px`;
+        };
+        naoButton.addEventListener("click", handleNao);
+        naoButton.addEventListener.left("mouseover", handleNao)
+</script>
+</html>
+
